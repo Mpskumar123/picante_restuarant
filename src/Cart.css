@@ -16,6 +16,8 @@
 .cart-table {
   display: flex;
   flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 400px; /* Limit the maximum height of the table */
 }
 
 /* Style for the table rows */
@@ -61,4 +63,47 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 20px;
+}
+
+/* Mobile view */
+@media only screen and (max-width: 600px) {
+  .cart-container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .cart-menu {
+    padding: 10px;
+  }
+
+  .cart-table {
+    display: block; /* Stack items vertically on small screens */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px; /* Limit the maximum height for mobile screens */
+  }
+
+  .cart-table-row {
+    display: block; /* Make rows stack on small screens */
+    margin-bottom: 10px;
+  }
+
+  .cart-table-cell {
+    display: block; /* Stack cells */
+    padding: 8px 0;
+  }
+
+  .quantity-button {
+    width: 18px; /* Adjust button width for mobile */
+    height: 18px; /* Adjust button height for mobile */
+    font-size: 0.7rem; /* Smaller font size for mobile */
+  }
+
+  .remove-button {
+    padding: 8px 16px;
+  }
+
+  .total-price {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
 }

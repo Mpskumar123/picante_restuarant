@@ -86,7 +86,7 @@ function AboutUs() {
   );
 
   return (
-    <div>
+    <div class='about-c'>
       <Nav links={Nav} />
       <div className="about-container">
         <h1 className="about-heading">About Picante Restaurant</h1>
@@ -115,8 +115,10 @@ function AboutUs() {
           a culinary journey like no other. Come join us and discover why we're not just
           a restaurant, but a destination for food lovers and aficionados alike.
         </p>
+
       </div>
       {ratingSection}
+
     </div>
   );
 }

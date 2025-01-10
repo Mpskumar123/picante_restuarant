@@ -1,3 +1,4 @@
+/* Login.css */
 body {
     margin: 0;
     padding: 0;
@@ -19,11 +20,12 @@ body {
 }
 
 .Login-container {
-    width: 300px; /* You can adjust this width as needed */
+    width: 90%; /* Full width for mobile */
+    max-width: 300px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* Navbar Styles */
@@ -32,7 +34,8 @@ body {
     top: 20%;
     left: 70%;
     transform: translate(-35%, -30%);
-    width: 300px;
+    width: 90%; /* Full width for mobile */
+    max-width: 300px;
     background-color: #f5f7f9;
     padding: 10px 20px;
     border-radius: 10px;
@@ -46,15 +49,34 @@ body {
     padding: 0;
     display: flex; 
     justify-content: space-between; 
+    flex-wrap: wrap; /* Wrap items on smaller screens */
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: #333; /* Changed color to a darker gray */
     font-weight: bold;
+    flex: 1 1 100%; /* Make links stack vertically on smaller screens */
+    text-align: center;
+    padding: 10px 0;
     transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: #666; /* Changed hover color to a lighter gray */
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .Login-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .navbar {
+        top: 15%;
+        left: 5%;
+        transform: translate(0, 0);
+        width: 90%;
+    }
 }

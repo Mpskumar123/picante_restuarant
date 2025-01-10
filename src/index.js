@@ -10,6 +10,7 @@ import Homepage from './Homepage';
 import Login from './Login';
 import Cart from './Cart';
 import Signup from './Signup';
+import Logout from './Login'; // Import the Logout component
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="/home1" element={<Homepage />} />
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Logout />} /> 
+
       </Routes>
     </Router>
   );

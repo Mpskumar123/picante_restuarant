@@ -5,7 +5,7 @@ import Login from './Login';
 import Signup from './Signup';
 
 function Log() {
-  const [showLogin, setShowLogin] = useState(true); // Initially show the Login component
+  const [showLogin, setShowLogin] = useState(true); 
 
   const toggleForm = () => {
     setShowLogin((prevShowLogin) => !prevShowLogin);

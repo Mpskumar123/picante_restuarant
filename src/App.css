@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* Mobile view adjustments */
+@media only screen and (max-width: 600px) {
+  .App-header {
+    min-height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .App-header {
+    font-size: calc(8px + 1.5vmin);
+  }
+  
+  .App-link {
+    font-size: 1rem;
+  }
+}

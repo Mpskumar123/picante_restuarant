@@ -8,6 +8,7 @@ function Signup() {
   const [password, setPassword] = useState('');
   const [rePassword, setRePassword] = useState('');
   const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -25,9 +26,10 @@ function Signup() {
     }
 
     try {
-      // Make a POST request to store user information in MongoDB
       await axios.post('https://picante-backendfile.onrender.com/signup', { username, password });
-      // Navigate to the login page after successful signup
+      
+      setSuccessMessage('User added successfully!');
+      
       navigate('/login');
     } catch (error) {
       setError('Error signing up');
@@ -83,7 +85,13 @@ function Signup() {
               style={{ width: '270px' }}
             />
           </div>
+          
+          {/* Display error message */}
           {error && <p style={{ color: 'red' }}>{error}</p>}
+          
+          {/* Display success message */}
+          {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+          
           <button type="submit">Sign Up</button>
         </form>
       </div>

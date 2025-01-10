@@ -12,7 +12,6 @@
     max-height: 80vh; /* Set a maximum height for the container */
 }
 
-
 .item {
     background-color: #f9f9f9; /* Light gray background */
     padding: 20px;
@@ -90,10 +89,55 @@ button:hover {
     font-size: 1rem;
     color: #666;
 }
-/* Navbar */
 
-  
- 
+/* Mobile view */
+@media only screen and (max-width: 600px) {
+    .home {
+        padding: 10px;
+        text-align: center;
+    }
 
-  
- 
+    .menu {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .item {
+        padding: 10px;
+    }
+
+    .item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .item h2 {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .cart {
+        margin-top: 20px;
+    }
+
+    .cart h2 {
+        font-size: 1.2rem;
+    }
+
+    .cart li {
+        font-size: 0.9rem;
+    }
+}

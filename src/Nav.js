@@ -12,6 +12,7 @@ import Tiffins from './Tiffins';
 import './Nav.css';
 import Homepage from './Homepage';
 import Cart from './Cart';
+import Login from './Login';
 
 
 function App() {
@@ -63,6 +64,11 @@ function App() {
             <FontAwesomeIcon icon={faShoppingCart} /> Cart
           </NavLink>
         </li>
+        <li>
+      <NavLink activeClassName="active" to="/login">
+        Login
+      </NavLink>
+    </li>
       </ul>
     </Box>
   );
@@ -125,6 +131,11 @@ function App() {
                     <FontAwesomeIcon icon={faShoppingCart} /> Cart
                   </NavLink>
                 </li>
+                <li>
+              <NavLink activeClassName="active" to="/login">
+                Login
+              </NavLink>
+            </li>
               </ul>
             </Box>
           </Toolbar>
@@ -157,6 +168,8 @@ function App() {
         <Route path="/veg" element={<Veg />} />
         <Route path="/tiffins" element={<Tiffins />} />
         <Route path="/add-to-cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
     </>
   );
