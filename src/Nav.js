@@ -66,7 +66,7 @@ function App() {
         </li>
         <li>
       <NavLink activeClassName="active" to="/login">
-        Login
+      Logout
       </NavLink>
     </li>
       </ul>
@@ -133,7 +133,7 @@ function App() {
                 </li>
                 <li>
               <NavLink activeClassName="active" to="/login">
-                Login
+                Logout
               </NavLink>
             </li>
               </ul>
